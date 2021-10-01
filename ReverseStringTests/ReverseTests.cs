@@ -13,7 +13,7 @@ namespace ReverseStringTests
             string reverseTo = "reverseTest";
             string expected = "tseTesrever";
 
-            string actual = ReverseString.ReverseStr.Reverse(reverseTo);
+            string actual = ReverseStr.Reverse(reverseTo);
 
             Assert.AreEqual(expected, actual);
         }
@@ -23,7 +23,7 @@ namespace ReverseStringTests
             string reverseTo = "ab";
             string expected = "ba";
 
-            string actual = ReverseString.ReverseStr.Reverse(reverseTo);
+            string actual = ReverseStr.Reverse(reverseTo);
 
             Assert.AreEqual(expected, actual);
         }
@@ -34,8 +34,28 @@ namespace ReverseStringTests
             string reverseTo = "T";
             string expected = "T";
 
-            string actual = ReverseString.ReverseStr.Reverse(reverseTo);
+            string actual = ReverseStr.Reverse(reverseTo);
 
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void StringReverseNewTest()
+        {
+            string reverseTo = "reverse";
+            string expected = "esrever";
+
+            string actual = ReverseStr.ReverseNew(reverseTo);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void StringReverseNewTest1()
+        {
+            string reverseTo = "aBcD";
+            string expected = "DcBa";
+
+            string actual = ReverseStr.ReverseNew(reverseTo);
             Assert.AreEqual(expected, actual);
         }
 
@@ -56,6 +76,26 @@ namespace ReverseStringTests
             try
             {
                 ReverseStr.Reverse(null);
+                Assert.Fail();
+            }catch (ArgumentException) { }
+        }
+        
+        [TestMethod]
+        public void ExceptionTest2()
+        {
+            try
+            {
+                ReverseStr.ReverseNew(null);
+                Assert.Fail();
+            }catch (ArgumentException) { }
+        }
+        
+        [TestMethod]
+        public void ExceptionTest3()
+        {
+            try
+            {
+                ReverseStr.ReverseNew("");
                 Assert.Fail();
             }catch (ArgumentException) { }
         }
