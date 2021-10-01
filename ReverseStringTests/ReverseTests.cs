@@ -24,7 +24,7 @@ namespace ReverseStringTests
         [DataTestMethod]
         public void ReverseNewStringReverseTest(string input, string output)
         {
-            var response = ReverseStr.Reverse(input);
+            var response = ReverseStr.ReverseNew(input);
             Assert.AreEqual(response, output);
         }
 
