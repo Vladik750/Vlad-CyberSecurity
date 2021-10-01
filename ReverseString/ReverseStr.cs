@@ -9,7 +9,7 @@ namespace ReverseString
         {
             if (String.IsNullOrEmpty(inputString))
             {
-                throw new ArgumentException($"Wrong input: {inputString} is null or empty!");
+                throw new ArgumentException("Wrong input: Input string is null or empty!");
             }
 
             string temp = "";
@@ -24,7 +24,7 @@ namespace ReverseString
         {
             if (String.IsNullOrEmpty(inputString))
             {
-                throw new ArgumentException($"Wrong input: {inputString} is null or empty!");
+                throw new ArgumentException("Wrong input: Input string is null or empty!");
             }
 
             int size = inputString.Length;
@@ -38,7 +38,7 @@ namespace ReverseString
 
         static void Main(string[] args)
         {
-            string reverseTo = "abcd";
+            string reverseTo = "";
             Console.WriteLine(ReverseNew(reverseTo));
         }
     }

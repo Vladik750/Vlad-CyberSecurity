@@ -7,97 +7,57 @@ namespace ReverseStringTests
     [TestClass]
     public class ReverseTests
     {
-        [TestMethod]
-        public void StringReverseTest()
-        {
-            string reverseTo = "reverseTest";
-            string expected = "tseTesrever";
-
-            string actual = ReverseStr.Reverse(reverseTo);
-
-            Assert.AreEqual(expected, actual);
-        }
-        [TestMethod]
-        public void StringReverseTest1()
-        {
-            string reverseTo = "ab";
-            string expected = "ba";
-
-            string actual = ReverseStr.Reverse(reverseTo);
-
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void StringReverseTest2()
-        {
-            string reverseTo = "T";
-            string expected = "T";
-
-            string actual = ReverseStr.Reverse(reverseTo);
-
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void StringReverseNewTest()
-        {
-            string reverseTo = "reverse";
-            string expected = "esrever";
-
-            string actual = ReverseStr.ReverseNew(reverseTo);
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void StringReverseNewTest1()
-        {
-            string reverseTo = "aBcD";
-            string expected = "DcBa";
-
-            string actual = ReverseStr.ReverseNew(reverseTo);
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void ExceptionTest()
-        {
-            try
-            {
-                ReverseStr.Reverse("");
-                Assert.Fail();
-            }
-            catch (ArgumentException) { }
-        }
-
-        [TestMethod]
-        public void ExceptionTest1()
-        {
-            try
-            {
-                ReverseStr.Reverse(null);
-                Assert.Fail();
-            }catch (ArgumentException) { }
-        }
         
-        [TestMethod]
-        public void ExceptionTest2()
+        [DataRow("test","tset")]
+        [DataRow("1234Aa","aA4321")]
+        [DataRow("rev erse","esre ver")]
+        [DataTestMethod]
+        public void StringReverseTest(string input, string output)
         {
-            try
-            {
-                ReverseStr.ReverseNew(null);
-                Assert.Fail();
-            }catch (ArgumentException) { }
+            var response = ReverseStr.Reverse(input);
+            Assert.AreEqual(response, output);
         }
-        
-        [TestMethod]
-        public void ExceptionTest3()
+
+        [DataRow("test123", "321tset")]
+        [DataRow("bB4321", "1234Bb")]
+        [DataRow("rev erse", "esre ver")]
+        [DataTestMethod]
+        public void ReverseNewStringReverseTest(string input, string output)
         {
-            try
-            {
-                ReverseStr.ReverseNew("");
-                Assert.Fail();
-            }catch (ArgumentException) { }
+            var response = ReverseStr.Reverse(input);
+            Assert.AreEqual(response, output);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException),"Wrong input: Input string is null or empty!")]
+        public void EmptyStringTest()
+        {
+            string reverseTo = "";
+            ReverseStr.Reverse(reverseTo);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException), "Wrong input: Input string is null or empty!")]
+        public void NullInputTest()
+        {
+            string reverseTo = null;
+            ReverseStr.Reverse(reverseTo);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException), "Wrong input: Input string is null or empty!")]
+        public void ReverseNewEmptyStringTest()
+        {
+            string reverseTo = "";
+            ReverseStr.ReverseNew(reverseTo);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException), "Wrong input: Input string is null or empty!")]
+        public void ReverseNewNullInputTest()
+        {
+            string reverseTo = null;
+            ReverseStr.ReverseNew(reverseTo);
         }
 
     }
