@@ -7,24 +7,23 @@ namespace ReverseString
     {
         private static string ReverseString(string inputString)
         {
-            if (inputString.Length == 0 || inputString == null)
+            if (String.IsNullOrEmpty(inputString))
             {
-                return "Input error";
+                throw new ArgumentException($"Wrong input {inputString}");
             }
-            else
+
+            string temp = "";
+            for (int i = inputString.Length - 1; i > -1; i--)
             {
-                string temp = "";
-                for (int i = inputString.Length - 1; i > -1; i--)
-                {
-                    temp += inputString[i];
-                }
-                return temp;
+                temp += inputString[i];
             }
+            return temp;
+
         }
 
         static void Main(string[] args)
         {
-            string reverseTo = "reverse"; //esrever
+            string reverseTo = ""; 
             Console.WriteLine(ReverseString(reverseTo));
         }
     }
