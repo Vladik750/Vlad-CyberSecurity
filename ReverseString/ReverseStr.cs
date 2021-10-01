@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Text;
-using System.Collections.Generic;
 
 namespace ReverseString
 {
@@ -40,7 +38,7 @@ namespace ReverseString
 
         static void Main(string[] args)
         {
-            string reverseTo = "abc";
+            string reverseTo = "abcd";
             Console.WriteLine(ReverseNew(reverseTo));
         }
     }
