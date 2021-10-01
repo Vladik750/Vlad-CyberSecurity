@@ -10,3 +10,4 @@ C:\Users\USER\source\repos\ReverseString\obj\Debug\netcoreapp3.1\ReverseString.c
 C:\Users\USER\source\repos\ReverseString\obj\Debug\netcoreapp3.1\ReverseString.dll
 C:\Users\USER\source\repos\ReverseString\obj\Debug\netcoreapp3.1\ReverseString.pdb
 C:\Users\USER\source\repos\ReverseString\obj\Debug\netcoreapp3.1\ReverseString.genruntimeconfig.cache
+C:\Users\USER\source\repos\ReverseString\obj\Debug\netcoreapp3.1\ReverseString.csprojAssemblyReference.cache
