@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parentheses", "Parentheses.csproj", "{6198B4EE-E6B7-4E66-BE82-DB456AF51C46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParenrhesesTests", "..\ParenrhesesTests\ParenrhesesTests.csproj", "{94EC1D59-3DF8-4391-BCF9-15A567F00108}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6198B4EE-E6B7-4E66-BE82-DB456AF51C46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6198B4EE-E6B7-4E66-BE82-DB456AF51C46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6198B4EE-E6B7-4E66-BE82-DB456AF51C46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6198B4EE-E6B7-4E66-BE82-DB456AF51C46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94EC1D59-3DF8-4391-BCF9-15A567F00108}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94EC1D59-3DF8-4391-BCF9-15A567F00108}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94EC1D59-3DF8-4391-BCF9-15A567F00108}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94EC1D59-3DF8-4391-BCF9-15A567F00108}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {877F7CCA-CBA0-407E-9F51-96518303F5D5}
+	EndGlobalSection
+EndGlobal
