@@ -7,6 +7,16 @@ namespace ParenrhesesTests
     public class ParenthesesTest
     {
         [TestMethod]
+        public void NotParenthesesInputTest()
+        {
+            string s = "123";
+            bool expected = false;
+            Paren p = new Paren();
+            bool actual = p.IsValid(s);
+
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
         public void EmptyStringTest()
         {
             string s = "";
