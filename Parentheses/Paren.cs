@@ -24,7 +24,7 @@ namespace Parentheses
 
         public bool IsValid(string s)
         {
-            if ( String.IsNullOrEmpty(s) || s.Length % 2 != 0 || !isOpening(s[0]))
+            if ( String.IsNullOrEmpty(s) || s.Length % 2 != 0 || !isOpening(s[0]))//input validation
             {
                 return false;
             }

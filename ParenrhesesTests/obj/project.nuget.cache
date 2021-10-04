@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vshWMxD9x7P6Bp56XnHQcRdC50gxOP/XHvmrmjl/8X9rk0ZEmznLOYHfpMPy7ZfIOz3+Q82eyqy+dRJmD4nl8w==",
+  "dgSpecHash": "vZYyj7zyIhOegJ8WJ6AwhrYDsFqJ8AO+jRj5kmQzPOXmGA3Gl7u3tb3zMeS/XF57wyZ1z77RzWbXW/NY9IVUCw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\USER\\source\\repos\\ParenrhesesTests\\ParenrhesesTests.csproj",
+  "projectFilePath": "C:\\Users\\USER\\source\\repos\\ParenrhesesTests\\ParenthesesTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\coverlet.collector\\1.3.0\\coverlet.collector.1.3.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.codecoverage\\16.7.1\\microsoft.codecoverage.16.7.1.nupkg.sha512",

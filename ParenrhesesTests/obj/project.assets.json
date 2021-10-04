@@ -5738,9 +5738,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USER\\source\\repos\\ParenrhesesTests\\ParenrhesesTests.csproj",
-      "projectName": "ParenrhesesTests",
-      "projectPath": "C:\\Users\\USER\\source\\repos\\ParenrhesesTests\\ParenrhesesTests.csproj",
+      "projectUniqueName": "C:\\Users\\USER\\source\\repos\\ParenrhesesTests\\ParenthesesTests.csproj",
+      "projectName": "ParenthesesTests",
+      "projectPath": "C:\\Users\\USER\\source\\repos\\ParenrhesesTests\\ParenthesesTests.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\USER\\source\\repos\\ParenrhesesTests\\obj\\",
       "projectStyle": "PackageReference",
