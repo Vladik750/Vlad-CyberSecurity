@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USER\\source\\repos\\Parentheses\\Parentheses.csproj": {}
+    "C:\\Users\\USER\\Desktop\\Cyber-repo\\Vlad-CyberSecurity\\Parentheses\\Parentheses.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USER\\source\\repos\\Parentheses\\Parentheses.csproj": {
+    "C:\\Users\\USER\\Desktop\\Cyber-repo\\Vlad-CyberSecurity\\Parentheses\\Parentheses.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\source\\repos\\Parentheses\\Parentheses.csproj",
+        "projectUniqueName": "C:\\Users\\USER\\Desktop\\Cyber-repo\\Vlad-CyberSecurity\\Parentheses\\Parentheses.csproj",
         "projectName": "Parentheses",
-        "projectPath": "C:\\Users\\USER\\source\\repos\\Parentheses\\Parentheses.csproj",
+        "projectPath": "C:\\Users\\USER\\Desktop\\Cyber-repo\\Vlad-CyberSecurity\\Parentheses\\Parentheses.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER\\source\\repos\\Parentheses\\obj\\",
+        "outputPath": "C:\\Users\\USER\\Desktop\\Cyber-repo\\Vlad-CyberSecurity\\Parentheses\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config"
