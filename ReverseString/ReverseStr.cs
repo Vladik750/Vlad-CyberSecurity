@@ -9,7 +9,7 @@ namespace ReverseString
         {
             if (String.IsNullOrEmpty(inputString))
             {
-                throw new ArgumentException("Wrong input: Input string is null or empty!");
+                throw new ArgumentException($"Wrong input: input string is null or empty!");
             }
 
             string temp = "";
@@ -24,11 +24,11 @@ namespace ReverseString
         {
             if (String.IsNullOrEmpty(inputString))
             {
-                throw new ArgumentException("Wrong input: Input string is null or empty!");
+                throw new ArgumentException($"Wrong input: input string is null or empty!");
             }
 
             int size = inputString.Length;
-            for(int i=size-1;i>-1;i--)
+            for (int i = size - 1; i > -1; i--)
             {
                 inputString += inputString[i];
             }
@@ -36,10 +36,34 @@ namespace ReverseString
             return inputString;
         }
 
+        public static string ReverseXOR(string inputString)
+        {
+            if (String.IsNullOrEmpty(inputString))
+            {
+                throw new ArgumentException("Wrong input: Input string is null or empty!");
+            }
+            char[] input = inputString.ToCharArray();
+            
+            int start = 0;
+            int end = input.Length - 1;
+
+            while (start < end)
+            {
+                input[start] ^= input[end];
+                input[end] ^= input[start];
+                input[start] ^= input[end];
+
+                ++start;
+                --end;
+            }
+            return String.Join("", input);
+        }
+
+
         static void Main(string[] args)
         {
-            string reverseTo = "";
-            Console.WriteLine(ReverseNew(reverseTo));
+            string reverseTo = "rev";
+            Console.WriteLine(ReverseXOR(reverseTo));
         }
     }
 }

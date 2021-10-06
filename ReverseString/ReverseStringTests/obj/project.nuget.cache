@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AUTrjtShAfdaLtTJ3+aWMga++sm++2SGijfHx/S+5slWPZzn/BB1oGkCyl2+EqqRyZuUIgkyuGRsIB10v4OKiQ==",
+  "dgSpecHash": "Fcqa624pREMC/zsm3eB30xbA7eLiwIwr1L8Q5H1qJVPj6z8o9YvUPS4HOKyw4QrsWI6CKUUkEkPMh1h5XiCzBA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\USER\\Desktop\\Cyber-repo\\Vlad-CyberSecurity\\ReverseStringTests\\ReverseStringTests.csproj",
+  "projectFilePath": "C:\\Users\\USER\\source\\repos\\ReverseStringTests\\ReverseStringTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\coverlet.collector\\1.3.0\\coverlet.collector.1.3.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.codecoverage\\16.7.1\\microsoft.codecoverage.16.7.1.nupkg.sha512",
