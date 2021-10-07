@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parentheses", "Parentheses.csproj", "{6198B4EE-E6B7-4E66-BE82-DB456AF51C46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Parentheses", "Parentheses.csproj", "{6198B4EE-E6B7-4E66-BE82-DB456AF51C46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParenrhesesTests", "..\ParenrhesesTests\ParenrhesesTests.csproj", "{94EC1D59-3DF8-4391-BCF9-15A567F00108}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParenthesesTests", "..\ParenrhesesTests\ParenthesesTests.csproj", "{94EC1D59-3DF8-4391-BCF9-15A567F00108}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

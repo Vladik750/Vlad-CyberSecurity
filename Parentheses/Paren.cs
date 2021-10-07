@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace Parentheses
@@ -12,7 +13,7 @@ namespace Parentheses
             {'{','}' }
         };
 
-        public bool isOpening(char c)
+        public bool IsOpening(char c)
         {
             if (c == '{' || c == '(' || c == '[')
             {
@@ -22,9 +23,66 @@ namespace Parentheses
 
         }
 
+        public bool ValidatedInput(string s)
+        {
+            if(String.IsNullOrEmpty(s))
+            {
+                throw new ArgumentException("Wrong input: Input string is null or empty!");
+                //return false;
+            }
+            if(s.Length%2 !=0)
+            {
+                throw new ArgumentException("Wrong input: Input string length is odd!");
+            }
+            for(int i=0;i<s.Length;i++)
+            {
+                if(parentheses.ContainsKey(s[i])|| parentheses.ContainsValue(s[i]))
+                {
+                    continue;
+                }
+                else
+                {
+                    throw new ArgumentException("Wrong input: Input string should contain only parentheses!");
+                }
+            }
+            return true;
+            
+        }
+
+        public bool IsValidByStack(string s)
+        {
+            if (!ValidatedInput(s) || !IsOpening(s[0]) || IsOpening(s[s.Length-1]))
+            {
+                return false; 
+            }
+            Stack<char> stack = new Stack<char>(s.Length);
+            for(int i=0;i<s.Length;i++)
+            {
+                stack.Push(s[i]);
+                if(stack.Count >=2)
+                {
+                    char last = stack.ElementAt<char>(0);
+                    char preLast = stack.ElementAt<char>(1);
+                    foreach(var item in parentheses)
+                    {
+                        if (item.Key == preLast && item.Value == last)
+                        {
+                            stack.Pop();
+                            stack.Pop();
+                        }
+                    }
+                }
+            }
+            if (stack.Count == 0)
+            {
+                return true;
+            }
+            else return false;
+        }
+
         public bool IsValid(string s)
         {
-            if ( String.IsNullOrEmpty(s) || s.Length % 2 != 0 || !isOpening(s[0]))//input validation
+            if ( !ValidatedInput(s) || !IsOpening(s[0]) || IsOpening(s[s.Length - 1]))
             {
                 return false;
             }
@@ -36,8 +94,7 @@ namespace Parentheses
                 for (int i = 0; i < s.Length; i++)
                 {
                     foreach (var item in parentheses)
-                    {
-                        
+                    {  
                         if (item.Key == s[i] && item.Value == s[i + 1])
                         {
                             s = s.Remove(i, 2);
@@ -57,9 +114,9 @@ namespace Parentheses
         static void Main(string[] args)
         {
             Paren p = new Paren();
-            string s = "]";
-            Console.WriteLine(p.IsValid(s));
+            string s = "[})[()]{}(";
             
+            Console.WriteLine(p.IsValidByStack(s));
         }
     }
 }

@@ -13,19 +13,21 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USER\\Desktop\\Cyber-repo\\Vlad-CyberSecurity\\Parentheses\\Parentheses.csproj",
+      "projectUniqueName": "C:\\Users\\USER\\source\\repos\\Parentheses\\Parentheses.csproj",
       "projectName": "Parentheses",
-      "projectPath": "C:\\Users\\USER\\Desktop\\Cyber-repo\\Vlad-CyberSecurity\\Parentheses\\Parentheses.csproj",
+      "projectPath": "C:\\Users\\USER\\source\\repos\\Parentheses\\Parentheses.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USER\\Desktop\\Cyber-repo\\Vlad-CyberSecurity\\Parentheses\\obj\\",
+      "outputPath": "C:\\Users\\USER\\source\\repos\\Parentheses\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -58,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
