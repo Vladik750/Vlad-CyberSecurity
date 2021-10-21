@@ -1,0 +1,14 @@
+C:\Users\USER\source\repos\Request\bin\Debug\netcoreapp3.1\Request.exe
+C:\Users\USER\source\repos\Request\bin\Debug\netcoreapp3.1\Request.deps.json
+C:\Users\USER\source\repos\Request\bin\Debug\netcoreapp3.1\Request.runtimeconfig.json
+C:\Users\USER\source\repos\Request\bin\Debug\netcoreapp3.1\Request.runtimeconfig.dev.json
+C:\Users\USER\source\repos\Request\bin\Debug\netcoreapp3.1\Request.dll
+C:\Users\USER\source\repos\Request\bin\Debug\netcoreapp3.1\Request.pdb
+C:\Users\USER\source\repos\Request\obj\Debug\netcoreapp3.1\Request.csproj.AssemblyReference.cache
+C:\Users\USER\source\repos\Request\obj\Debug\netcoreapp3.1\Request.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\source\repos\Request\obj\Debug\netcoreapp3.1\Request.AssemblyInfoInputs.cache
+C:\Users\USER\source\repos\Request\obj\Debug\netcoreapp3.1\Request.AssemblyInfo.cs
+C:\Users\USER\source\repos\Request\obj\Debug\netcoreapp3.1\Request.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\Request\obj\Debug\netcoreapp3.1\Request.dll
+C:\Users\USER\source\repos\Request\obj\Debug\netcoreapp3.1\Request.pdb
+C:\Users\USER\source\repos\Request\obj\Debug\netcoreapp3.1\Request.genruntimeconfig.cache
