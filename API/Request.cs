@@ -8,6 +8,7 @@ namespace API
     {
         public string name;
         public Server server;
+        public User user;
 
         public Request(RequestBuilder requestBuilder)
         {
@@ -21,11 +22,19 @@ namespace API
     {
         public string name;
         public Server server;
+        public User user;
 
         public RequestBuilder()
         {
-            this.name = "Request.";
+            this.name = "";
             this.server = null;
+            this.user = null;
+        }
+
+        public RequestBuilder FromUser(User user)
+        {
+            this.user = user;
+            return this;
         }
         public RequestBuilder ToServer(Server server)
         {

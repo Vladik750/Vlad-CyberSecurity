@@ -7,14 +7,27 @@ namespace API
     class User
     {
         private Respond respond;
-        public void SendRequest(Request request)
-        {
 
+        public void SetRespond(Respond respond)
+        {
+            this.respond = respond;
+        }
+            
+        public void SendRequest(Server server)
+        {
+            Console.WriteLine("Enter request name:");
+            string requestName = Console.ReadLine();
+            Request request = new RequestBuilder().FromUser(this).ToServer(server).RequestName(requestName).Build();
+            Console.WriteLine("Request Sent.\n");
+
+            server.ManageRequest(request);
+            server.SendRespond(this);
+            ShowData();
         }
 
-        public void ShowInfo()
+        public void ShowData()
         {
-
+            respond.ShowRespond();
         }
     }
 }

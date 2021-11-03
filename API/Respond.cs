@@ -6,15 +6,65 @@ namespace API
 {
     class Respond
     {
-        public string text;
-        public object respondObject;
-        public Request request;
+        public IData data;
+        public User user;
+        public string message;
 
-        public Respond(string text, object respondObject, Request request )
+        public Respond(RespondBuilder respondBuilder)
         {
-            this.text = text;
-            this.respondObject = respondObject;
-            this.request = request;
+            data = respondBuilder.data;
+            user = respondBuilder.user;
+            message = respondBuilder.message;
+        }
+
+        public void ShowRespond()
+        {
+            if(data != null)
+            {
+                Console.WriteLine(message);
+                data.ShowData();   
+            }
+            else
+            {
+                Console.WriteLine(message);
+            }
+            
         }
     }
+
+    class RespondBuilder
+    {
+        public IData data;
+        public User user;
+        public string message;
+
+        public RespondBuilder()
+        {
+            message = "";
+        }
+
+        public RespondBuilder ToUser(User user)
+        {
+            this.user = user;
+            return this;
+        }
+
+        public RespondBuilder WithData(IData data)
+        {
+            this.data = data;
+            return this;
+        }
+
+        public RespondBuilder WithMessage(string message)
+        {
+            this.message = message;
+            return this;
+        }
+
+        public Respond Build()
+        {
+            return new Respond(this);
+        }
+    }
+
 }
