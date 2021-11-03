@@ -6,12 +6,12 @@ namespace API
 {
     class Server
     {
-        public Respond respond;
+        public Response response;
         public List<IData> dataList;
 
         public Server()
         {
-            respond = null;
+            response = null;
             dataList = null;
         }
         public Server(IData dataItem)
@@ -30,7 +30,7 @@ namespace API
             {
                 if (dataList == null)
                 {
-                    respond = new RespondBuilder().WithMessage("Server is empty!").Build();
+                    response = new ResponseBuilder().WithMessage("Server is empty!").Build();
                 }
                 else
                 {
@@ -38,19 +38,19 @@ namespace API
                     {
                         if (dataList[i] is Person)
                         {
-                            respond = new RespondBuilder().WithData(dataList[i]).ToUser(request.user).WithMessage("Successful!").Build();
+                            response = new ResponseBuilder().WithData(dataList[i]).ToUser(request.user).WithMessage("Successful!").Build();
                             break;
                         }
-                        respond = new RespondBuilder().WithMessage("Server didn`t find such item!").Build();
+                        response = new ResponseBuilder().WithMessage("Server didn`t find such item!").Build();
                     }
                 }
 
             }
-            if (request.name == "Get pet")
+            else if (request.name == "Get pet")
             {
                 if (dataList == null)
                 {
-                    respond = new RespondBuilder().WithMessage("Server is empty!").Build();
+                    response = new ResponseBuilder().WithMessage("Server is empty!").Build();
                 }
                 else
                 {
@@ -58,23 +58,24 @@ namespace API
                     {
                         if (dataList[i] is Pet)
                         {
-                            respond = new RespondBuilder().WithData(dataList[i]).ToUser(request.user).WithMessage("Successful!").Build();
+                            response = new ResponseBuilder().WithData(dataList[i]).ToUser(request.user).WithMessage("Successful!").Build();
                             break;
                         }
-                        respond = new RespondBuilder().WithMessage("Server didn`t find such item!").Build();
+                        response = new ResponseBuilder().WithMessage("Server didn`t find such item!").Build();
                     }
                 }
 
             }
-            /* else
-             {
-                 respond = new RespondBuilder().WithMessage("Unknown request!").Build();
-             }*/
+            else
+            {
+                response = new ResponseBuilder().WithMessage("Unknown request!").Build();
+            }
+
         }
 
-        public void SendRespond(User user)
+        public void SendResponse(User user)
         {
-            user.SetRespond(respond);
+            user.SetResponse(response);
         }
 
     }

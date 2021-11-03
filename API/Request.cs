@@ -14,8 +14,10 @@ namespace API
         {
             this.name = requestBuilder.name;
             this.server = requestBuilder.server;
+            this.user = requestBuilder.user;
         }
 
+       
     }
 
     class RequestBuilder

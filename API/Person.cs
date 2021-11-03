@@ -40,7 +40,4 @@ namespace API
 
     }
 
-    class PersonBuilder
-    { }
-
 }

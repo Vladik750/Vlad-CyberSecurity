@@ -6,11 +6,11 @@ namespace API
 {
     class User
     {
-        private Respond respond;
+        private Response response;
 
-        public void SetRespond(Respond respond)
+        public void SetResponse(Response response)
         {
-            this.respond = respond;
+            this.response = response;
         }
             
         public void SendRequest(Server server)
@@ -21,13 +21,13 @@ namespace API
             Console.WriteLine("Request Sent.\n");
 
             server.ManageRequest(request);
-            server.SendRespond(this);
+            server.SendResponse(this);
             ShowData();
         }
 
         public void ShowData()
         {
-            respond.ShowRespond();
+            response.ShowResponse();
         }
     }
 }
