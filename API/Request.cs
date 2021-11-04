@@ -7,7 +7,7 @@ namespace API
     class Request
     {
         public string name;
-        public Server server;
+        private Server server;
         public User user;
 
         public Request(RequestBuilder requestBuilder)

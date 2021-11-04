@@ -6,11 +6,11 @@ namespace API
 {
     class Person:IData
     {
-        public string name;
-        public string job; 
-        public int age;
-        public double salary;
-        public bool isMarried;
+        private string name;
+        private string job; 
+        private int age;
+        private double salary;
+        private bool isMarried;
 
         public Person(string name,  string job, int age, double salary, bool isMarried)
         {

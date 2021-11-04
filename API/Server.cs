@@ -6,8 +6,8 @@ namespace API
 {
     class Server
     {
-        public Response response;
-        public List<IData> dataList;
+        private Response response;
+        private List<IData> dataList;
 
         public Server()
         {
@@ -26,6 +26,7 @@ namespace API
 
         public void ManageRequest(Request request)
         {
+            //server-side request validation
             if (request.name == "Get person")
             {
                 if (dataList == null)

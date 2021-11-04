@@ -17,6 +17,7 @@ namespace API
             message = respondBuilder.message;
         }
 
+        //Writes the data of an object 
         public void ShowResponse()
         {
             if(data != null)
