@@ -24,9 +24,13 @@ namespace API
 
             IRestResponse response = client.Get(request);
 
-            Console.WriteLine(response.Content.ToString());
+            ShowResponse(response);
         }
 
+        public void ShowResponse(IRestResponse response)
+        {
+            Console.WriteLine(response.Content.ToString());
+        }
         
     }
 }
