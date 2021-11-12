@@ -19,16 +19,10 @@ namespace API
             IMakeRequest makeRequest = new ManageRequest();
             IRestResponse resp = makeRequest.MakeRequest(myClient, myRequest);
 
-            IShowResponse consoleResponse = new ResponseToConsole();
-            consoleResponse.ShowResponse(resp);
-
-            /*string url = "https://swapi.dev/api/people";
-            RestClient client = new RestClient(url);
-            var request = new RestRequest();
-            request.AddParameter("search", "C-3PO");
-            var response = client.Get(request);
-
-            Console.WriteLine(response.Content.ToString());*/
+            //IShowResponse consoleResponse = new ResponseToConsole();
+            IShowResponse responseHtml = new ResponseToHTML();
+            //consoleResponse.ShowResponse(resp);
+            responseHtml.ShowResponse(resp);
 
         }
     }

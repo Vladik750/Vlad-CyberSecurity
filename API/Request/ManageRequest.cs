@@ -7,10 +7,10 @@ namespace API
 {
     class ManageRequest : IMakeRequest, IBuildRequest
     {
-        IRestRequest IBuildRequest.BuildRequest(IGetUserInput input, IRestRequest request /*,string parameter*/)
+        IRestRequest IBuildRequest.BuildRequest(IGetUserInput input, IRestRequest request )
         {
             string attribute = input.GetUserInput();
-            return request.AddParameter(/*parameter*/"search", attribute);            
+            return request.AddParameter("search", attribute);            
         }
 
         IRestResponse IMakeRequest.MakeRequest(Client client, IRestRequest request)

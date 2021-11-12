@@ -7,6 +7,6 @@ namespace API
 {
     interface IBuildRequest
     {
-        IRestRequest BuildRequest(IGetUserInput input, IRestRequest request /*,string parameter*/);
+        IRestRequest BuildRequest(IGetUserInput input, IRestRequest request);
     }
 }
