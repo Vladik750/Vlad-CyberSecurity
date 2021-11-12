@@ -10,7 +10,7 @@ namespace API
            
             Client myClient = new Client();
             string parameter = "name";
-            AskUser askId = new AskUser("Enter " + parameter + ": ");
+            SayToUser askId = new SayToUser("Enter " + parameter + ": ");
             IGetUserInput consoleInput = new GetConsoleInput();
 
             IRestRequest myRequest = new RestRequest();

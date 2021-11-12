@@ -8,6 +8,7 @@ namespace API
     {
         public string inputString;
 
+        //constructor that reads from console
         public GetConsoleInput()
         {
             inputString = Console.ReadLine();

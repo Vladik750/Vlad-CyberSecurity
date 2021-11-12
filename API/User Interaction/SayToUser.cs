@@ -4,9 +4,9 @@ using System.Text;
 
 namespace API
 {
-    class AskUser
+    class SayToUser
     {
-        public AskUser(string question)
+        public SayToUser(string question)
         {
             Console.WriteLine(question);
         }

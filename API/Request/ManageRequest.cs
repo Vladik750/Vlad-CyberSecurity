@@ -7,6 +7,7 @@ namespace API
 {
     class ManageRequest : IMakeRequest, IBuildRequest
     {
+        //adds a search parameter to request
         IRestRequest IBuildRequest.BuildRequest(IGetUserInput input, IRestRequest request )
         {
             string attribute = input.GetUserInput();

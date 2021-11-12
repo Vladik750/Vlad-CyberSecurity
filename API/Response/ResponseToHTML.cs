@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Diagnostics;
 using System.IO;
 
 namespace API
@@ -11,9 +12,10 @@ namespace API
         private string path = @"C:\Users\USER\source\repos\API\index.html";
         void IShowResponse.ShowResponse(IRestResponse response)
         {
-            /// Create a file and write a response to it.
+            // Create a file 
             FileStream fs = File.Create(path);
             fs.Close();
+            // write response to a file
             StreamWriter streamWriter = new StreamWriter(path);
             streamWriter.WriteLine("<html>");
             streamWriter.WriteLine("<head>");
@@ -25,7 +27,15 @@ namespace API
             streamWriter.WriteLine("</body>");
             streamWriter.WriteLine("</html>");
             streamWriter.Close();
-            StreamReader sr = File.OpenText(path);
+
+            //Open the file in the default browser
+            Process process = new Process();
+            ProcessStartInfo processInfo = new ProcessStartInfo();
+            processInfo.UseShellExecute = true;
+            processInfo.FileName = path.ToString();
+            process.StartInfo = processInfo;
+
+            process.Start();
         }
     }
 }
