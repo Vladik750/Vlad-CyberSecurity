@@ -1,24 +1,35 @@
 ﻿using System;
 using RestSharp;
 
-
 namespace API
 {
     class Program
     {
         static void Main(string[] args)
         {
-            //string url = "https://jsonplaceholder.typicode.com/posts";
-            //var client = new RestClient(url);
-
+           
             Client myClient = new Client();
-            //var request = new RestRequest();
-            myClient.MakeRequest();
-            //request.AddParameter("id", "4");
+            string parameter = "name";
+            AskUser askId = new AskUser("Enter " + parameter + ": ");
+            IGetUserInput consoleInput = new GetConsoleInput();
 
-            //var response = client.Get(request);
+            IRestRequest myRequest = new RestRequest();
+            IBuildRequest build = new ManageRequest();
+            myRequest = build.BuildRequest(consoleInput, myRequest);
+            IMakeRequest makeRequest = new ManageRequest();
+            IRestResponse resp = makeRequest.MakeRequest(myClient, myRequest);
 
-            //Console.WriteLine(response.Content.ToString());
+            IShowResponse consoleResponse = new ResponseToConsole();
+            consoleResponse.ShowResponse(resp);
+
+            /*string url = "https://swapi.dev/api/people";
+            RestClient client = new RestClient(url);
+            var request = new RestRequest();
+            request.AddParameter("search", "C-3PO");
+            var response = client.Get(request);
+
+            Console.WriteLine(response.Content.ToString());*/
+
         }
     }
 }

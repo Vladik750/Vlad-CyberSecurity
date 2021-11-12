@@ -11,25 +11,7 @@ namespace API
 
         public Client()
         {
-            client = new RestClient("https://jsonplaceholder.typicode.com/posts");
-        }
-
-        public void MakeRequest()
-        {
-            AskUser ask = new AskUser("Enter id: ");
-            GetInput input = new GetInput();
-
-            RestRequest request = new RestRequest();
-            request.AddParameter("id", input.inputString);
-
-            IRestResponse response = client.Get(request);
-
-            ShowResponse(response);
-        }
-
-        public void ShowResponse(IRestResponse response)
-        {
-            Console.WriteLine(response.Content.ToString());
+            client = new RestClient("https://swapi.dev/api/people");
         }
         
     }
